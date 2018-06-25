@@ -134,7 +134,7 @@ function pluralize(word, count) {
 
 module.exports = function(input) {
   var callback = this.async();
-  var options  = merge(this.options, this.query);
+  var options  = merge((this.options || {}), this.query);
   var webpack  = this;
 
   this.cacheable && this.cacheable();
