@@ -2,27 +2,20 @@
 
 ## Install
 
-```console
-$ npm install coffee-lint-loader
+```sh
+$ yarn add https://github.com/jbox-web/coffeelint-loader.git
 ```
 
 ## Usage
 
 In your Webpack configuration:
 
-``` js
+```js
 module.exports = {
-    // ...
-	module: {
-		preLoaders: [
-			{
-			    test: /\.coffee$/,
-                loader: "coffee-lint-loader",
-				exclude: /node_modules/
-			}
-		]
-	}
-    // ...
+  test: /\.coffee$/,
+  enforce: 'pre',
+  exclude: /node_modules/,
+  loader: 'coffee-lint-loader'
 }
 ```
 
@@ -33,16 +26,11 @@ You can pass directly some [coffeelint options](http://www.coffeelint.org/#optio
 - Adding a query string to the loader:
 
 ```js
-{
-  module: {
-    loaders: [
-      {
-        test: /\.coffee$/,
-        loader: "coffee-lint-loader?{...}",
-        exclude: /node_modules/,
-      },
-    ],
-  },
+module.exports = {
+  test: /\.coffee$/,
+  enforce: 'pre',
+  exclude: /node_modules/,
+  loader: "coffee-lint-loader?{...}"
 }
 ```
 
@@ -50,9 +38,9 @@ You can pass directly some [coffeelint options](http://www.coffeelint.org/#optio
 
 ```js
 module.exports = {
-    coffeelint: {
-        configFile: 'path/.coffeelint'
-    }
+  coffeelint: {
+    configFile: 'path/.coffeelint'
+  }
 }
 ```
 
