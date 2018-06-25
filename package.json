@@ -18,7 +18,7 @@
     "url": "https://github.com/lewie9021/coffeelint-loader"
   },
   "dependencies": {
-    "coffeelint": "1.9.x",
+    "coffeelint": "2.1.x",
     "loader-utils": "0.2.x",
     "strip-json-comments": "1.0.x",
     "chalk": "1.0.x",
