@@ -59,7 +59,7 @@ function process(webpack, input, options) {
 
 function merge(options, query) {
   var opts = {};
-  var q = LoaderUtils.parseQuery(query);
+  // var q = LoaderUtils.parseQuery(query);
 
   // Shallow clone options object.
   if (options.coffeelint) {
