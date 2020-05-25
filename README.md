@@ -15,9 +15,9 @@ In your Webpack configuration:
 ```js
 module.exports = {
   test: /\.coffee$/,
+  loader: 'coffee-lint-loader',
   enforce: 'pre',
-  exclude: /node_modules/,
-  loader: 'coffee-lint-loader'
+  exclude: /node_modules/
 }
 ```
 
@@ -25,18 +25,18 @@ module.exports = {
 
 You can pass directly some [coffeelint options](http://www.coffeelint.org/#options) by
 
-- Adding a query string to the loader:
+* Adding a query string to the loader:
 
 ```js
 module.exports = {
   test: /\.coffee$/,
+  loader: "coffee-lint-loader?{...}",
   enforce: 'pre',
-  exclude: /node_modules/,
-  loader: "coffee-lint-loader?{...}"
+  exclude: /node_modules/
 }
 ```
 
-- Adding an `coffeelint` entry in you webpack config for global options:
+* Adding an `coffeelint` entry in you webpack config for global options:
 
 ```js
 module.exports = {
